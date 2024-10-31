@@ -1,0 +1,54 @@
+/* GENERAL STYLING */
+:root {
+    --neutral-0: #ffffff;
+    --neutral-100: #e6e6e6;
+    --neutral-200: #cccccc;
+    --neutral-300: #b3b3b3;
+    --neutral-400: #999999;
+    --neutral-500: #808080; 
+    --neutral-600: #666666;
+    --neutral-700: #4d4d4d;
+    --neutral-800: #333333;
+    --neutral-840: #292929;
+    --neutral-900: #1a1a1a;
+    --neutral-1000: #000000;
+
+    --primary-yellow: #ffe815; 
+    --primary-orange: #e85a09; 
+    --primary-pink: #e22d75; 
+
+    --background: #0f0f0f;
+
+    --font-primary:'Bespoke Stencil', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-secondary);
+}
+
+/* CSS RESET */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+  }
+
+h1, h2, h3, h4, h5,h6 {
+    text-wrap: balance;
+}
+
+p, li, figcaption {
+    text-wrap: pretty;
+    max-width: 600px;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
