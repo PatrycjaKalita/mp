@@ -25,6 +25,7 @@
 
 body {
     font-family: var(--font-secondary);
+    background-color: var(--background);
 }
 
 /* CSS RESET */
@@ -52,3 +53,16 @@ img, picture, video, canvas, svg {
     max-width: 100%;
   }
   
+/* COMPONENT STYLING */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: sticky; 
+    top: 0;           
+    z-index: 10;      
+}
