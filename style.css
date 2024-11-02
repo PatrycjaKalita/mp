@@ -26,6 +26,7 @@
 body {
     font-family: var(--font-secondary);
     background-color: var(--background);
+    color: var(--neutral-0);
 }
 
 /* CSS RESET */
