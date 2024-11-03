@@ -67,3 +67,57 @@ header {
     top: 0;           
     z-index: 10;      
 }
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-bg-graphic {
+    position: absolute;
+    width: 100%; 
+}
+
+.banner-content {
+    padding-top: 186px;
+    padding-bottom: 312px;
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-family: var(--font-primary);
+    font-size: 96px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.banner-content p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38.4px;
+    margin: auto;
+    padding-top: 56px;
+}
+
+.banner-content button{
+    font-family: var(--font-primary);
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    width: 600px;
+    height: 82px;
+    background-color: var(--neutral-1000);
+    color: var(--neutral-0);
+    border: 1px solid var(--neutral-1000);
+    cursor: pointer;
+}
+
+.banner-content button:hover {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, #FFEB38, rgba(255, 120, 1, 0)) 1;
+    cursor: pointer;
+}

@@ -2,6 +2,7 @@
 
 - **index.html** - The main HTML file containing the structure of the website.
 - **style.css** - The CSS file that provides styling for the website.
+- **assets/** - Folder containing various project assets
 
 ## Instructions
 
