@@ -70,7 +70,6 @@ header {
 
 main {
     width: 100%;
-    overflow: hidden;
 }
 
 .banner-bg-graphic {
@@ -79,45 +78,113 @@ main {
 }
 
 .banner-content {
-    padding-top: 186px;
-    padding-bottom: 312px;
     position: relative;
-    width: 1400px;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin-top: 12em;
 }
 
 .banner-content h1 {
     font-family: var(--font-primary);
-    font-size: 96px;
+    font-size: 6rem;
     font-weight: 500;
     letter-spacing: -0.02em;
 }
 
 .banner-content p {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 38.4px;
-    margin: auto;
-    padding-top: 56px;
+    line-height: 1.6;
+    margin: 2em auto 0;
 }
 
-.banner-content button{
-    font-family: var(--font-primary);
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+.banner-btn-container {
+    margin: 4em auto 0 auto;
     width: 600px;
     height: 82px;
-    background-color: var(--neutral-1000);
-    color: var(--neutral-0);
-    border: 1px solid var(--neutral-1000);
-    cursor: pointer;
+    overflow: hidden;
 }
 
-.banner-content button:hover {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
-    border: 1px solid transparent;
-    border-image: linear-gradient(90deg, #FFEB38, rgba(255, 120, 1, 0)) 1;
+.banner-btn-container button {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--neutral-1000);
+    color: var(--neutral-0);
+    border: 2px solid var(--neutral-1000);
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: border-image 1s;
+}
+
+.banner-btn-container button:hover {
+    border-image: linear-gradient(90deg, rgba(255, 235, 56, 1), rgba(255, 120, 1, 0)) 1; 
+}
+
+.banner-btn-container button {
+    border-image: linear-gradient(90deg, rgba(255, 235, 56, 0), rgba(255, 120, 1, 0)) 0;
+}
+
+.banner-btn-container object {
+    position: absolute;
+    transform: translateY(-20%); 
+    left: 24%;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.banner-btn-container:hover object {
+    opacity: 1;
+}
+
+@media (max-width: 1120px) {
+    .banner-content {
+        max-width: 80%;
+        margin-top: 6em;
+    }
+
+    .banner-btn-container {
+        width: 500px;
+    }
+    
+    .banner-btn-container object {
+        left: 13%;
+    }
+}
+
+@media (max-width: 640px) {
+    .banner-content {
+        max-width: 80%;
+        margin: 4em auto 0;
+    }
+
+    .banner-content h1 {
+        font-size: 4rem;
+    }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .banner-btn-container {
+        margin: 3em auto 0 auto;
+        width: 100%;
+    }
+    
+    .banner-btn-container button {
+        font-size: 1.5rem;
+    }
+    
+    .banner-btn-container object {
+        left: -10%;
+    }
 }
