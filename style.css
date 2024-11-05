@@ -74,7 +74,6 @@ header {
 }
 
 .banner-content {
-    position: relative;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -82,7 +81,7 @@ header {
     justify-content: center;
     align-items: center;
     max-width: 1400px;
-    margin-top: 12em;
+    height: 800px;
 }
 
 .banner-content h1 {
@@ -96,11 +95,11 @@ header {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.6;
-    margin: 2em auto 0;
+    margin: 2em 0 0;
 }
 
 .banner-content button {
-    margin: 4em auto 0 auto;
+    margin: 4em 0 0;
     font-family: var(--font-primary);
     font-size: 2rem;
     font-weight: 500;
@@ -111,7 +110,7 @@ header {
     color: var(--neutral-0);
     cursor: pointer;
     border: none;
-    transition: .5s;
+    transition: box-shadow 0.5s, color 0.5s;
     position: relative;
 }
 
@@ -131,7 +130,7 @@ header {
     content: '';
     width: 600px;
     height: 82px;
-    transition: all ease-in-out 0.5s;
+    transition: transform ease-in-out 0.5s, background-color ease-in-out 0.5s, box-shadow ease-in-out 0.5s, color ease-in-out 0.5s;
     background-repeat: no-repeat;
     left: 2%;
     z-index: -1;
@@ -171,6 +170,7 @@ header {
     transform: scale(0.9);
     background-color: var(--primary-pink);
     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    color: var(--neutral-0);
 }
   
 .bubbly-button.animate:before {
@@ -220,7 +220,6 @@ header {
 
     .banner-content {
         max-width: 80%;
-        margin-top: 6em;
     }
 
     .banner-content p {
@@ -256,7 +255,7 @@ header {
 
     .banner-content {
         max-width: 80%;
-        margin: 4em auto 0;
+        height: 600px;
     }
 
     .banner-content h1 {
