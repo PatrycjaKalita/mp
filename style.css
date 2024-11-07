@@ -137,7 +137,7 @@ header {
     z-index: -1;
   }
 
-  .banner-content button:before {
+.banner-content button:before {
     display: none;
     top: -90%;
     background-image: 
@@ -289,6 +289,10 @@ header {
     justify-content: center;    
     align-items: center;        
     height: 100%;
+}
+
+.service-content-text ul {
+    width: 600px;
 }
 
 .service-content-text ul {
