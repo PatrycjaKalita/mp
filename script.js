@@ -29,7 +29,7 @@ function switchTab(event) {
       event.target.classList.add('active');
   
       const tabId = event.target.getAttribute('data-tab');
-      document.getElementById(`content-${tabId}`).classList.add('active-content');
+      document.getElementById(`service-content-${tabId}`).classList.add('active-content');
 }
 
 for (let i = 0; i < tabButtons.length; i++) {

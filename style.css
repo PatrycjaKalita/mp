@@ -277,22 +277,21 @@ header {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100%; 
-    width: 100%;
-    gap: 1.5em; 
+    gap: 2%; 
 }
 
 .service-content-graphic {
-    width: 600px;
-    height: 400px;
+    width: 45%;
+    height: 86%;
     display: flex;              
     justify-content: center;    
     align-items: center;        
-    height: 100%;
+    padding: 0 auto;
 }
 
-.service-content-text ul {
-    width: 600px;
+.service-content-text {
+    width: 45%;
+    padding-top: 4rem;
 }
 
 .service-content-text ul {
