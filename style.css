@@ -219,6 +219,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .services-container h2 {
@@ -229,7 +230,7 @@ header {
 }
 
 .services-container p {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.6;
     margin: 2em auto 0;
@@ -237,10 +238,10 @@ header {
 
 .services-content{
     margin-top: 4em;
+    text-align: left;
 }
 
 .service-tab {
-    padding: 0;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -249,6 +250,7 @@ header {
     font-weight: 500;
     padding: 1em 2.5em;
     transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
 .service-tab-icon {
@@ -269,7 +271,7 @@ header {
 .service-container {
     display: none;
     width: 100%;
-    height: 460px;
+    height: 440px;
     background-color: var(--neutral-840);
 }
 
@@ -286,12 +288,12 @@ header {
     display: flex;              
     justify-content: center;    
     align-items: center;        
-    padding: 0 auto;
 }
 
 .service-content-text {
     width: 45%;
     padding-top: 4rem;
+    text-align: left;
 }
 
 .service-content-text ul {
@@ -301,7 +303,7 @@ header {
 }
 
 .service-content-text li {
-    font-size: 1.125rem; 
+    font-size: 1.1rem; 
     line-height: 1.6;
     font-weight: 400;
 }
@@ -321,13 +323,15 @@ header {
     color: var(--neutral-0);
     cursor: pointer;
     border: none;
+    white-space: nowrap;
 }
 
 .service-container.active-content {
     display: block;
 }
 
-@media (max-width: 1120px) {
+
+@media (max-width: 1400px) {
     /* HEADER */
     header {
         height: 60px;
@@ -360,7 +364,60 @@ header {
     .banner-content button:before,
     .banner-content button:after {
         left: -8%;
-  }
+    }
+
+    /* SERVICES SECTION */
+    .services-container {
+        margin: 6em auto 0;
+        max-width: 80%;
+    }
+
+    .services-container p {
+        font-size: 1rem;
+        margin: 1em auto 0;
+    }
+
+    .service-tab {
+        font-size: 1rem;
+        padding: 0.6em 1.8em; 
+    }
+
+    .service-tab-icon {
+        margin-right: 0.2em; 
+        transform: scale(0.8);
+    }
+
+    .service-container {
+        display: none;
+        height: fit-content;
+    }
+
+    .service-content-graphic {
+        width: 45%;
+        height: 300px;
+    }
+
+    .service-content-graphic object{
+        transform: scale(0.6);
+    }
+
+    .service-content-text {
+        width: 40%;
+        padding-top: 2em;
+    }
+
+    .service-content-text h2 {
+        font-size: 1.5rem; 
+    }
+
+    .service-content-text li {
+        font-size: 0.8rem; 
+    }
+
+    .service-content-text button {
+        margin: 1em 0;
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -375,7 +432,6 @@ header {
 
     /* HERO SECTION */
     .banner-content {
-        max-width: 80%;
         height: 600px;
     }
 
@@ -395,10 +451,53 @@ header {
     .banner-content button:before,
     .banner-content button:after {
         left: -10%;
-  }
+     }
+
+     /* SERVICES SECTION */
+    .services-container {
+        max-width: 90%;
+    }
+
+    .services-content {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .service-tab {
+        font-size: 0.8rem;
+    }
+
+    .service-tab-icon{
+        transform: scale(0.6);
+        margin-right: 0;
+    }
+
+    .service-container{
+        width: 80%;
+    }
+
+    .service-content {
+        flex-direction: column;  
+        height: fit-content;
+    }
+
+    .service-content-graphic {
+        width: 240px;        
+        height: 160px;                 
+    }
+    .service-content-graphic object{
+        transform: scale(0.4);               
+    }
+
+    .service-content-text {
+        width: 80%;             
+        padding-top: 2rem;  
+    }
 }
 
-@media (max-width: 376px) {
+@media (min-width: 330px) and (max-width: 376px) {
     /* HERO SECTION */
     .banner-content {
         height: 400px;
