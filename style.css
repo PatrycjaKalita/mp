@@ -236,7 +236,7 @@ header {
     margin: 2em auto 0;
 }
 
-.services-content{
+.services-content {
     margin-top: 4em;
     text-align: left;
 }
@@ -258,13 +258,13 @@ header {
     vertical-align: middle; 
 }
 
-.active {
+.active-service-tab {
     background-color: var(--neutral-800);
     color: var(--neutral-0);
     border-radius: 20px 20px 0 0;
 }
 
-.service-tab.active .service-tab-icon {
+.service-tab.active-service-tab .service-tab-icon {
     filter: brightness(0) saturate(100%) invert(99%) sepia(6%) saturate(1273%) hue-rotate(231deg) brightness(114%) contrast(80%);
 }
 
@@ -330,7 +330,6 @@ header {
     display: block;
 }
 
-
 @media (max-width: 1400px) {
     /* HEADER */
     header {
@@ -392,12 +391,16 @@ header {
         height: fit-content;
     }
 
+    .service-content, .services-content {
+        width: 100%;
+    }
+
     .service-content-graphic {
         width: 45%;
         height: 300px;
     }
 
-    .service-content-graphic object{
+    .service-content-graphic object {
         transform: scale(0.6);
     }
 
@@ -419,6 +422,62 @@ header {
         font-size: 1.5rem;
     }
 }
+
+@media (max-width: 1080px) {
+     /* SERVICES SECTION */
+    .services-container {
+        max-width: 80%;
+    }
+
+    .services-content {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+    }
+
+    .services-tabs-container {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        height: fit-content;
+    }
+
+    .service-tab {
+        font-size: 0.7rem;
+        padding: 0.5em 1em;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .service-tab-icon {
+        transform: scale(0.6);
+        margin-right: 0;
+        rotate: 90deg;
+    }
+
+    .service-container {
+        width: 65%;
+        height: 100%;
+    }
+
+    .service-content {
+        flex-direction: column;  
+    }
+
+    .service-content-graphic {
+        width: 80%;  
+        height: 240px;             
+    }
+
+    .service-content-graphic object {
+        transform: scale(0.6);               
+    }
+
+    .service-content-text {
+        width: 80%;             
+        padding-top: 2rem;  
+    }
+}
+
 
 @media (max-width: 640px) {
     /* HEADER */
@@ -458,42 +517,17 @@ header {
         max-width: 90%;
     }
 
-    .services-content {
-        width: 100%;
-        align-items: center;
-        flex-direction: column;
-        display: flex;
-    }
-
-    .service-tab {
-        font-size: 0.8rem;
-    }
-
-    .service-tab-icon{
-        transform: scale(0.6);
-        margin-right: 0;
-    }
-
-    .service-container{
+    .service-container {
         width: 80%;
-    }
-
-    .service-content {
-        flex-direction: column;  
-        height: fit-content;
     }
 
     .service-content-graphic {
         width: 240px;        
         height: 160px;                 
     }
-    .service-content-graphic object{
-        transform: scale(0.4);               
-    }
 
-    .service-content-text {
-        width: 80%;             
-        padding-top: 2rem;  
+    .service-content-graphic object {
+        transform: scale(0.4);               
     }
 }
 
@@ -513,5 +547,53 @@ header {
 
     .banner-content button {
         font-size: 0.8rem;
+    }
+
+    /* SERVICES SECTION */
+    .services-container h2 {
+        font-size: 1.6rem;
+    }
+    
+    .services-container p {
+        font-size: 0.8rem;
+    }
+
+    .services-content {
+        margin-top: 2em;
+    }
+
+    .service-tab {
+        font-size: 0.6rem;
+        padding: 0.8em 0.6em;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .service-tab-icon {
+        transform: scale(0.4);
+    }
+
+    .service-container {
+        width: 80%;
+    }
+
+    .service-content {
+        flex-direction: column;  
+    }
+
+    .service-content-graphic {
+        width: 80%;  
+        height: 160px;             
+    }
+
+    .service-content-text h2 {
+        font-size: 1rem; 
+    }
+
+    .service-content-text li {
+        font-size: 0.8rem; 
+    }
+
+    .service-content-text button {
+        font-size: 1.4rem;
     }
 }

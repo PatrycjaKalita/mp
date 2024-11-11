@@ -22,11 +22,11 @@ const contents = document.getElementsByClassName('service-container');
   
 function switchTab(event) {
       for (let i = 0; i < tabButtons.length; i++) {
-          tabButtons[i].classList.remove('active');
+          tabButtons[i].classList.remove('active-service-tab');
           contents[i].classList.remove('active-content');
       }
 
-      event.target.classList.add('active');
+      event.target.classList.add('active-service-tab');
   
       const tabId = event.target.getAttribute('data-tab');
       document.getElementById(`service-content-${tabId}`).classList.add('active-content');
