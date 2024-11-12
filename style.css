@@ -253,6 +253,11 @@ header {
     white-space: nowrap;
 }
 
+.service-tab:not(.active-service-tab):hover {
+    border-radius: 20px 20px 0 0;
+    box-shadow: 2px 2px 10px rgba(117, 117, 117, 0.1) inset, -5px -8px 8px rgb(8, 8, 8) inset;
+}
+
 .service-tab-icon {
     margin-right: 0.5em; 
     vertical-align: middle; 
@@ -312,7 +317,7 @@ header {
     font-weight: 500;
 }
 
-.service-content-text button {
+.service-content-button {
     margin-top: 1.5em;
     font-family: var(--font-primary);
     font-size: 2rem;
@@ -324,6 +329,61 @@ header {
     cursor: pointer;
     border: none;
     white-space: nowrap;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-content-button:hover {
+    animation: burn 1000ms ease-out forwards;
+  } 
+
+.service-content-button:hover::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    width: 100px;
+    height: 40px;
+    background: rgba(250, 220, 69, 0.9);
+    border-radius: 100%;
+    animation: flare 1000ms ease-out forwards;
+}
+
+.service-content-button:hover::after {
+    content: '';
+    position: absolute;
+    right: 40px;
+    width: 100px;
+    height: 40px;
+    background: rgb(250, 220, 69);
+    border-radius: 100%;
+    animation: flare 1000ms ease-out forwards;
+}
+
+@keyframes flare {
+  100% {
+    transform: translateY(-40px) scale(1.8);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes burn {
+  0% {
+    color: rgb(251, 82, 55);
+    background: rgba(255, 230, 110, 1);
+    box-shadow:
+      0 0 5px 0 rgb(200, 0, 93),
+      0 0 5px 0 rgba(230, 10, 153, 0.8),
+      0 0 5px 0 rgba(230, 230, 10, 0.6);
+  }
+  100% {
+    box-shadow:
+      0 -35px 40px 30px rgba(255, 130, 10, 0),
+      0 -30px 30px 10px rgba(230, 30, 10, 0),
+      0 -20px 10px 0 rgba(255, 255, 10, 0);
+  }
 }
 
 .service-container.active-content {
@@ -417,7 +477,7 @@ header {
         font-size: 0.8rem; 
     }
 
-    .service-content-text button {
+    .service-content-button {
         margin: 1em 0;
         font-size: 1.5rem;
     }
@@ -440,11 +500,13 @@ header {
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         height: fit-content;
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     .service-tab {
         font-size: 0.7rem;
-        padding: 0.5em 1em;
+        padding: 1.2em 1em;
         border-radius: 0 20px 20px 0;
     }
 
@@ -475,6 +537,32 @@ header {
     .service-content-text {
         width: 80%;             
         padding-top: 2rem;  
+    }
+
+    .service-content-button:active {
+        animation: burn 1000ms ease-out forwards;
+      } 
+    
+    .service-content-button:active::before {
+        content: '';
+        position: absolute;
+        left: 40px;
+        width: 120px;
+        height: 50px;
+        background: rgba(250, 220, 69, 0.9);
+        border-radius: 100%;
+        animation: flare 1000ms ease-out forwards;
+    }
+    
+    .service-content-button:active::after {
+        content: '';
+        position: absolute;
+        right: 40px;
+        width: 120px;
+        height: 50px;
+        background: rgb(250, 220, 69);
+        border-radius: 100%;
+        animation: flare 1000ms ease-out forwards;
     }
 }
 
@@ -593,7 +681,7 @@ header {
         font-size: 0.8rem; 
     }
 
-    .service-content-text button {
+    .service-content-button {
         font-size: 1.4rem;
     }
 }
