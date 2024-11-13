@@ -299,12 +299,14 @@ header {
     width: 45%;
     padding-top: 4rem;
     text-align: left;
+
 }
 
 .service-content-text ul {
     margin-top: 2em;
     list-style-type: disc;
     padding-left: 20px;
+    z-index: 1;
 }
 
 .service-content-text li {
@@ -317,8 +319,16 @@ header {
     font-weight: 500;
 }
 
-.service-content-button {
+.service-content-button-container {
+    filter: url('#goo');    
     margin-top: 1.5em;
+    height: 6em;
+    display: flex;
+    align-items: center;
+} 
+
+.service-content-button {
+
     font-family: var(--font-primary);
     font-size: 2rem;
     font-weight: 500;
@@ -328,62 +338,37 @@ header {
     color: var(--neutral-0);
     cursor: pointer;
     border: none;
-    white-space: nowrap;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
 }
 
-.service-content-button:hover {
-    animation: burn 1000ms ease-out forwards;
-  } 
-
-.service-content-button:hover::before {
-    content: '';
+.service-content-button:before,
+.service-content-button:after {
+    width: 5em;
+    height: 2.9em;
     position: absolute;
-    left: 40px;
-    width: 100px;
-    height: 40px;
-    background: rgba(250, 220, 69, 0.9);
-    border-radius: 100%;
-    animation: flare 1000ms ease-out forwards;
+    content: "";
+    display: inline-block;
+    background: var(--neutral-1000);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
 }
 
-.service-content-button:hover::after {
-    content: '';
-    position: absolute;
-    right: 40px;
-    width: 100px;
-    height: 40px;
-    background: rgb(250, 220, 69);
-    border-radius: 100%;
-    animation: flare 1000ms ease-out forwards;
+.service-content-button:before {
+    top: -25%;
+    left: 20%;
 }
 
-@keyframes flare {
-  100% {
-    transform: translateY(-40px) scale(1.8);
-    filter: blur(20px);
-    opacity: 0;
-  }
+.service-content-button:after {
+    bottom: -25%;
+    right: 20%;
 }
 
-@keyframes burn {
-  0% {
-    color: rgb(251, 82, 55);
-    background: rgba(255, 230, 110, 1);
-    box-shadow:
-      0 0 5px 0 rgb(200, 0, 93),
-      0 0 5px 0 rgba(230, 10, 153, 0.8),
-      0 0 5px 0 rgba(230, 230, 10, 0.6);
-  }
-  100% {
-    box-shadow:
-      0 -35px 40px 30px rgba(255, 130, 10, 0),
-      0 -30px 30px 10px rgba(230, 30, 10, 0),
-      0 -20px 10px 0 rgba(255, 255, 10, 0);
-  }
+.service-content-button:hover:before,
+.service-content-button:hover:after {
+    transform: none;
 }
 
 .service-container.active-content {
@@ -477,8 +462,11 @@ header {
         font-size: 0.8rem; 
     }
 
-    .service-content-button {
+    .service-content-button-container {
         margin: 1em 0;
+    }
+
+    .service-content-button {
         font-size: 1.5rem;
     }
 }
@@ -537,32 +525,6 @@ header {
     .service-content-text {
         width: 80%;             
         padding-top: 2rem;  
-    }
-
-    .service-content-button:active {
-        animation: burn 1000ms ease-out forwards;
-      } 
-    
-    .service-content-button:active::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        width: 120px;
-        height: 50px;
-        background: rgba(250, 220, 69, 0.9);
-        border-radius: 100%;
-        animation: flare 1000ms ease-out forwards;
-    }
-    
-    .service-content-button:active::after {
-        content: '';
-        position: absolute;
-        right: 40px;
-        width: 120px;
-        height: 50px;
-        background: rgb(250, 220, 69);
-        border-radius: 100%;
-        animation: flare 1000ms ease-out forwards;
     }
 }
 
