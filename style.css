@@ -543,10 +543,6 @@ header {
 
 @media (max-width: 1080px) {
      /* SERVICES SECTION */
-    .services-container {
-        max-width: 80%;
-    }
-
     .services-content {
         width: 100%;
         height: fit-content;
@@ -596,8 +592,51 @@ header {
         width: 80%;             
         padding-top: 2rem;  
     }
-}
 
+    /* WHY CHOOSE US SECTION */
+    .whychooseus-container {
+        max-width: 80%;
+    }
+
+    .whychooseus-content {
+        width: 100%;
+    }
+
+    .whychooseus-content-left, .whychooseus-content-right {
+        height: 300px;
+        width: 100%;
+    }
+
+    .whychooseus-content-right object, .whychooseus-content-left object {
+        transform: scale(0.6);    
+    }
+
+    .whychooseus-content-left {
+        padding: 2em;
+    }
+
+    .whychooseus-content-right {
+        padding: 2em;
+    }
+
+    .whychooseus-content-left-text {
+        margin-left: 1em;
+    }
+
+    .whychooseus-content-right-text {
+        margin-right: 1em;
+    }
+
+    .whychooseus-content-left-text h3, .whychooseus-content-right-text h3 {
+        font-size: 1rem; 
+    }
+
+    .whychooseus-content-left-text p, 
+    .whychooseus-content-right-text p {
+        font-size: 0.8rem; 
+        margin-top: 1em;
+    }
+}
 
 @media (max-width: 640px) {
     /* HEADER */
@@ -648,6 +687,52 @@ header {
 
     .service-content-graphic object {
         transform: scale(0.4);               
+    }
+
+    /* WHY CHOOSE US SECTION */
+    .whychooseus-container {
+        max-width: 90%;
+    }
+
+    .whychooseus-container p {
+        font-size: 1rem;
+        margin: 1em auto 0;
+    }
+
+    .whychooseus-content {
+        gap: 2em;
+    }
+
+    .whychooseus-content-left, .whychooseus-content-right {
+        height: 250px;
+    }
+
+    .whychooseus-content-right object, .whychooseus-content-left object {
+        height: 150px;   
+    }
+
+    .whychooseus-content-left {
+        padding: 1em;
+    }
+
+    .whychooseus-content-right {
+        padding: 1em;
+    }
+
+    .whychooseus-content-left-text {
+        margin-left: 0.2em;
+        width: 60%;
+    }
+
+    .whychooseus-content-right-text {
+        margin-right: 0.2em;
+        width: 60%;
+    }
+
+    .whychooseus-content-left-text p, 
+    .whychooseus-content-right-text p {
+        font-size: 0.6rem; 
+        margin-top: 0.8em;
     }
 }
 
@@ -715,5 +800,48 @@ header {
 
     .service-content-button {
         font-size: 1.4rem;
+    }
+
+    /* WHY CHOOSE US SECTION */
+    .whychooseus-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .whychooseus-container p {
+        font-size: 0.8rem;
+    }
+
+    .whychooseus-content {
+        margin-top: 2em;
+    }
+
+    .whychooseus-content-left, .whychooseus-content-right {
+        height: 200px;
+    }
+
+    .whychooseus-content-right object, .whychooseus-content-left object {
+        height: 100px;   
+    }
+
+    .whychooseus-content-left {
+        padding: 0.8em;
+    }
+
+    .whychooseus-content-right {
+        padding: 0.8em;
+    }
+
+    .whychooseus-content-left-text {
+        margin-left: 0.1em;
+    }
+
+    .whychooseus-content-right-text {
+        margin-right: 0.1em;
+    }
+
+    .whychooseus-content-left-text p, 
+    .whychooseus-content-right-text p {
+        font-size: 0.5rem; 
+        margin-top: 0.6em;
     }
 }
