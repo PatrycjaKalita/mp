@@ -445,6 +445,67 @@ header {
     margin-top: 1.5em;
 }
 
+/* PORTFOLIO SECTION */
+.portfolio-container {
+    margin: 4em auto 0;
+    max-width: 1400px;
+    text-align: center;
+}
+
+.portfolio-container h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-container p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 2em auto 0;
+}
+
+.portfolio-content {
+    margin-top: 4em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-slide {
+    height: 400px;
+    width: 926px;
+    background-color: var(--neutral-800);
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.portfolio-slide-image {
+    width: 468px;
+    height: 100%;
+}
+
+.portfolio-slide-text {
+    margin: 0 2em 0 1.5em;
+}
+
+.portfolio-slide-text h3 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-slide-text p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 1.5em;
+    line-height: 1.6;
+}
+
 @media (max-width: 1400px) {
     /* HEADER */
     header {
