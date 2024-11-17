@@ -486,6 +486,7 @@ header {
 .portfolio-slide-image {
     width: 468px;
     height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-slide-text {
