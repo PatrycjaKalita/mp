@@ -476,24 +476,26 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3em;
 }
 
 .portfolio-slide-dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+    height: 1em;
+    width: 1em;
+    margin-left: 1em;
+    background-color: var(--neutral-800);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .portfolio-slide-active, .portfolio-slide-dot:hover {
-    background-color: #ffffff;
+    background-color: var(--neutral-600);
+    height: 1.5em;
+    width: 1.5em;
 }
   
-
 .portfolio-slide-fade {
     animation-name: fadeSlide;
     animation-duration: 1.5s;
@@ -825,6 +827,40 @@ header {
     .whychooseus-content-right-text p {
         font-size: 0.6rem; 
         margin-top: 0.8em;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-container {
+        max-width: 90%;
+    }
+
+    .portfolio-content {
+        margin-top: 4em;
+        width: 100%;
+    }
+    
+    .portfolio-slide {
+        height: 240px;
+        width: 100%;
+    }
+
+    .portfolio-slide-image {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio-slide-text {
+        margin: 0 1.5em 0 1em;
+    }
+
+    .portfolio-slide-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-slide-text p {
+        font-size: 0.8rem;
+        margin-top: 1em;
     }
 }
 
