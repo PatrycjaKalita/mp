@@ -730,6 +730,44 @@ header {
         font-size: 0.8rem; 
         margin-top: 1em;
     }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-container {
+        max-width: 80%;
+    }
+
+    .portfolio-slide-dot {
+        margin-left: 0.8em;
+    }
+
+    .portfolio-slide-active, .portfolio-slide-dot:hover {
+        height: 1.2em;
+        width: 1.2em;
+    }
+   
+    .portfolio-slide {
+        height: 300px;
+        width: 100%;
+    }
+
+    .portfolio-slide-image {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio-slide-text {
+        margin: 0 1.5em 0 1.2em;
+    }
+
+    .portfolio-slide-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-slide-text p {
+        font-size: 1rem;
+        margin-top: 1.2em;
+    }
 }
 
 @media (max-width: 640px) {
@@ -842,12 +880,6 @@ header {
     .portfolio-slide {
         height: 240px;
         width: 100%;
-    }
-
-    .portfolio-slide-image {
-        width: 50%;
-        height: 100%;
-        object-fit: cover;
     }
 
     .portfolio-slide-text {
