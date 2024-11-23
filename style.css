@@ -100,7 +100,7 @@ header {
     margin: 2em 0 0;
 }
 
-.banner-content button {
+.bubbly-button {
     margin: 4em 0 0;
     font-family: var(--font-primary);
     font-size: 2rem;
@@ -115,18 +115,18 @@ header {
     position: relative;
 }
 
-.banner-content button:hover {
+.bubbly-button:hover {
     color: #fc97bf;
     box-shadow: 0 0 15px var(--primary-pink);
     border-radius: 10px;
 }
 
-.banner-content button:focus {
+.bubbly-button:focus {
     outline: 0;
   }
   
-.banner-content button:before,
-.banner-content button:after {
+.bubbly-button:before,
+.bubbly-button:after {
     position: absolute;
     content: '';
     width: 600px;
@@ -137,7 +137,7 @@ header {
     z-index: -1;
   }
 
-.banner-content button:before {
+.bubbly-button:before {
     display: none;
     top: -90%;
     background-image: 
@@ -153,7 +153,7 @@ header {
     background-size: 8% 8%, 15% 15%, 12% 12%, 15% 15%, 14% 14%, 8% 8%, 12% 12%, 8% 8%, 14% 14%;
 }
 
-.banner-content button:after {
+.bubbly-button:after {
     display: none;
     top: 90%; 
     background-image: 
@@ -167,7 +167,7 @@ header {
     background-size: 12% 12%, 15% 15%, 14% 14%, 15% 15%, 12% 12%, 8% 8%, 15% 15%;
 }
   
-.banner-content button:active {
+.bubbly-button:active {
     transform: scale(0.9);
     background-color: var(--primary-pink);
     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
