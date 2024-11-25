@@ -586,6 +586,13 @@ header {
     background-color: var(--neutral-800);
 }
 
+.form-container h3 {
+    margin-top: 8em;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
 @media (max-width: 1400px) {
     /* HEADER */
     header {
