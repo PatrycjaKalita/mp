@@ -593,6 +593,51 @@ header {
     line-height: 1.4;
 }
 
+.form-options {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    justify-items: center;
+    align-items: center;
+}
+
+.form-option {
+    width: 335px;
+    padding: 1.5em;
+    height: fit-content;
+    border: solid 1px var(--neutral-800);
+    position: relative;
+}
+
+.form-option-check {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: solid 1px var(--neutral-800);
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.form-option object {
+    width: 86px;
+    height: 86px;
+}
+
+.form-option-text h4 {
+    margin-top: 1.5em;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.form-option-text p {
+    margin-top: 0.4em;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
 @media (max-width: 1400px) {
     /* HEADER */
     header {
