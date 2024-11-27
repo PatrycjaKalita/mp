@@ -602,6 +602,43 @@ header {
     align-items: center;
 }
 
+.form-options button {
+    border: none;
+    background-color: transparent;
+    color: var(--neutral-0);
+    cursor: pointer;
+}
+
+.form-options button:hover #form-option-icon-1 {
+    background-image: url('assets/icons/form/action/design.svg');
+}
+
+.form-options button:hover #form-option-icon-2 {
+    background-image: url('assets/icons/form/action/dev.svg');
+}
+
+.form-options button:hover #form-option-icon-3 {
+    background-image: url('assets/icons/form/action/graphic.svg');
+}
+
+.form-options button:hover #form-option-icon-4 {
+    background-image: url('assets/icons/form/action/seo.svg');
+}
+
+.form-options button:hover #form-option-icon-5 {
+    background-image: url('assets/icons/form/action/content.svg');
+}
+
+.form-options button:hover #form-option-icon-6 {
+    background-image: url('assets/icons/form/action/other.svg');
+}
+
+.form-options button:hover .form-option-check {
+    opacity: 0.8;
+    background: linear-gradient(90deg, #E22D75 0%, #EA7269 100%);
+    border: none;
+}
+
 .form-option {
     width: 335px;
     padding: 1.5em;
@@ -620,9 +657,11 @@ header {
     right: 1em;
 }
 
-.form-option object {
+.form-option-icon {
     width: 86px;
     height: 86px;
+    background-image: var(--image-url);
+    margin: 0 auto;
 }
 
 .form-option-text h4 {
