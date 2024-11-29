@@ -676,7 +676,6 @@ header {
     font-weight: 400;
 }
 
-
 @media (max-width: 1400px) {
     /* HEADER */
     header {
@@ -696,19 +695,19 @@ header {
         font-size: 1.25rem;
     }
 
-    .banner-content button {
+    .bubbly-button {
         margin: 3em auto 0 auto;
         font-size: 1.75rem;
     }
 
-    .banner-content button:hover {
+    .bubbly-button:hover {
         color: var(--neutral-0);
         box-shadow: none;
         border-radius: none;
     }
 
-    .banner-content button:before,
-    .banner-content button:after {
+    .bubbly-button:before,
+    .bubbly-button:after {
         left: -8%;
     }
 
@@ -954,13 +953,13 @@ header {
         font-size: 1rem;
     }
     
-    .banner-content button {
+    .bubbly-button {
         margin: 2em auto 0 auto;
         font-size: 1rem;
     }
 
-    .banner-content button:before,
-    .banner-content button:after {
+    .bubbly-button:before,
+    .bubbly-button:after {
         left: -10%;
      }
 
@@ -1055,6 +1054,33 @@ header {
         font-size: 0.8rem;
         margin-top: 1em;
     }
+
+    /* Form SECTION */
+    .form-container {
+        max-width: 90%;
+    }
+
+    .form-staus-bar-pattern {
+        gap: 0.6em;
+    }
+
+    .form-staus-bar-circle {
+        width: 1em;
+        height: 1em;
+    }
+
+    .form-staus-bar-line {
+        width: 3em;
+    }
+
+    .form-container h3 {
+        margin-top: 4em;
+    }
+
+    .form-options {
+        margin-top: 4em;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media (min-width: 330px) and (max-width: 376px) {
@@ -1071,7 +1097,7 @@ header {
         font-size: 0.8rem;
     }
 
-    .banner-content button {
+    .bubbly-button {
         font-size: 0.8rem;
     }
 
