@@ -996,6 +996,41 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px; 
     }
+
+    /* Footer */
+    .footer-container{
+        max-width: 80%;
+    }
+
+    .footer-content-column-1, .footer-content-column-2, .footer-content-column-3 {
+        width: 300px;
+    }
+
+    .footer-content-column-1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-content-column-1 p {
+        font-size: 0.8rem;
+    }
+
+    .footer-content-column-2 object, .footer-content-column-3 object {
+        width: 64px;
+        height: 64px;
+        margin-right: 1rem;
+    }
+
+    .footer-content-column-2-text-title, .footer-content-column-3-text-title {
+        font-size: 0.8rem;
+    }
+
+    .footer-content-column-2-text-data, .footer-content-column-3-text-data {
+        font-size: 1rem;
+    }
+
+    .footer-rights {
+        font-size: 0.6rem;
+    }
 }
 
 @media (max-width: 640px) {
