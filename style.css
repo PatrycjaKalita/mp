@@ -604,32 +604,32 @@ header {
 
 .form-options button {
     border: none;
-    background-color: transparent;
+    background: none;
     color: var(--neutral-0);
     cursor: pointer;
 }
 
-.form-options button:hover #form-option-icon-1 {
+.form-options button:hover #form-option-icon-1, .form-options button.active-form #form-option-icon-1 {
     background-image: url('assets/icons/form/action/design.svg');
 }
 
-.form-options button:hover #form-option-icon-2 {
+.form-options button:hover #form-option-icon-2, .form-options button.active-form #form-option-icon-2 {
     background-image: url('assets/icons/form/action/dev.svg');
 }
 
-.form-options button:hover #form-option-icon-3 {
+.form-options button:hover #form-option-icon-3, .form-options button.active-form #form-option-icon-3 {
     background-image: url('assets/icons/form/action/graphic.svg');
 }
 
-.form-options button:hover #form-option-icon-4 {
+.form-options button:hover #form-option-icon-4, .form-options button.active-form #form-option-icon-4 {
     background-image: url('assets/icons/form/action/seo.svg');
 }
 
-.form-options button:hover #form-option-icon-5 {
+.form-options button:hover #form-option-icon-5, .form-options button.active-form #form-option-icon-5 {
     background-image: url('assets/icons/form/action/content.svg');
 }
 
-.form-options button:hover #form-option-icon-6 {
+.form-options button:hover #form-option-icon-6, .form-options button.active-form #form-option-icon-6 {
     background-image: url('assets/icons/form/action/other.svg');
 }
 
@@ -645,6 +645,29 @@ header {
     height: fit-content;
     border: solid 1px var(--neutral-800);
     position: relative;
+    z-index: 1;
+}
+
+.form-options button:hover .form-option::before,
+.form-options button.active-form .form-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #E22D75 0%, #EA7269 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    padding: 1px;
+}
+
+.form-options button:hover .form-option,
+.form-options button.active-form .form-option {
+    border-color: transparent;
 }
 
 .form-option-check {
@@ -655,6 +678,22 @@ header {
     position: absolute;
     top: 1em;
     right: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.form-option-check object {
+    display: none;
+    margin: auto;
+}
+
+.form-options button.active-form .form-option-check {
+    background: linear-gradient(90deg, #E22D75 0%, #EA7269 100%);
+    border: none;
+}
+
+.form-options button.active-form .form-option-check object {
+    display: block;
 }
 
 .form-option-icon {

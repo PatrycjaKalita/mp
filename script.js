@@ -36,7 +36,7 @@ for (let i = 0; i < tabButtons.length; i++) {
       tabButtons[i].addEventListener('click', switchTab);
 }
 
-
+// Slideshow functionality that allows navigating through slides
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -63,3 +63,20 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "flex";  
   dots[slideIndex-1].className += " portfolio-slide-active";
 }
+
+//Adding event listeners for buttons in 'form' section
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".form-options button");
+
+  buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+
+          if (button.classList.contains("active-form")) {
+              button.classList.remove("active-form");
+          } else {
+              buttons.forEach(btn => btn.classList.remove("active-form"));
+              button.classList.add("active-form");
+          }
+      });
+  });
+});
