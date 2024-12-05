@@ -1223,6 +1223,52 @@ header {
         margin-top: 4em;
         grid-template-columns: repeat(1, 1fr);
     }
+
+    /* Footer */
+    .footer-container{
+        max-width: 90%;
+        display: block;
+    }
+
+    .footer-content-column-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-content-column-1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-content-column-1 p {
+        font-size: 0.8rem;
+        margin-top: 1em;
+    }
+
+    .footer-content-column-2, .footer-content-column-3 {
+        margin-top: 1.5em;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-content-column-2 object, .footer-content-column-3 object {
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+    }
+
+    .footer-content-column-2-text-title, .footer-content-column-3-text-title {
+        font-size: 0.6rem;
+    }
+
+    .footer-content-column-2-text-data, .footer-content-column-3-text-data {
+        font-size: 1rem;
+        margin-top: 0.4rem;
+    }
+
+    .footer-rights {
+        font-size: 0.6rem;
+    }
 }
 
 @media (min-width: 330px) and (max-width: 376px) {
