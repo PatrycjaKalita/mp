@@ -467,8 +467,8 @@ header {
 }
 
 .portfolio-content {
-    margin-top: 4em;
-    width: 100%;
+    margin: 4em auto 0;
+    width: fit-content;
 }
 
 .portfolio-slider {
@@ -477,6 +477,30 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 3em;
+}
+
+.portfolio-slider-btn-prev, .portfolio-slider-btn-next {
+    cursor: pointer;
+    position: absolute;
+
+    background-color: var(--neutral-840);
+    padding: 0.5em 1em;
+    color: var(--neutral-0);
+    font-size: 1.3rem;
+    border-radius: 80%;
+    user-select: none;
+}
+
+.portfolio-slider-btn-next {
+    right: -3%;
+}
+  
+.portfolio-slider-btn-prev {
+    left: -3%;
+}
+
+.portfolio-slider-btn-prev:hover, .portfolio-slider-btn-next:hover {
+    background-color: var(--neutral-700);
 }
 
 .portfolio-slide-dot {
